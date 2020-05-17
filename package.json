@@ -1,0 +1,14 @@
+{
+    "name": "scope-api-docs",
+    "version": "1.0.0",
+    "main": "deploy",
+    "license": "MIT",
+    "scripts": {
+        "dev": "vuepress dev docs",
+        "build": "vuepress build docs",
+        "deploy": "./deploy"
+    },
+    "dependencies": {
+        "vuepress": "^1.5.0"
+    }
+}
