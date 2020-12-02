@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Auth | Scope API</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    
+    <meta name="description" content="Official json api for scope">
+    <link rel="preload" href="/scope-api-docs/assets/css/0.styles.0299e191.css" as="style"><link rel="preload" href="/scope-api-docs/assets/js/app.57cb345d.js" as="script"><link rel="preload" href="/scope-api-docs/assets/js/2.35f32d9e.js" as="script"><link rel="preload" href="/scope-api-docs/assets/js/6.9ff61a8d.js" as="script"><link rel="prefetch" href="/scope-api-docs/assets/js/10.a5a2599e.js"><link rel="prefetch" href="/scope-api-docs/assets/js/11.797ffc2f.js"><link rel="prefetch" href="/scope-api-docs/assets/js/12.12c4fc00.js"><link rel="prefetch" href="/scope-api-docs/assets/js/13.c84132c9.js"><link rel="prefetch" href="/scope-api-docs/assets/js/14.c71089b1.js"><link rel="prefetch" href="/scope-api-docs/assets/js/15.2565360b.js"><link rel="prefetch" href="/scope-api-docs/assets/js/16.f7af56ae.js"><link rel="prefetch" href="/scope-api-docs/assets/js/17.b09d4cf8.js"><link rel="prefetch" href="/scope-api-docs/assets/js/18.2c6efea7.js"><link rel="prefetch" href="/scope-api-docs/assets/js/19.59d4d1e4.js"><link rel="prefetch" href="/scope-api-docs/assets/js/20.4f0ec522.js"><link rel="prefetch" href="/scope-api-docs/assets/js/21.aad1e2bd.js"><link rel="prefetch" href="/scope-api-docs/assets/js/22.ed1f10c3.js"><link rel="prefetch" href="/scope-api-docs/assets/js/23.63c5e334.js"><link rel="prefetch" href="/scope-api-docs/assets/js/3.493ded78.js"><link rel="prefetch" href="/scope-api-docs/assets/js/4.685e2bcc.js"><link rel="prefetch" href="/scope-api-docs/assets/js/5.875de7b8.js"><link rel="prefetch" href="/scope-api-docs/assets/js/7.ec7f4d33.js"><link rel="prefetch" href="/scope-api-docs/assets/js/8.ddd8961c.js"><link rel="prefetch" href="/scope-api-docs/assets/js/9.eb62822f.js">
+    <link rel="stylesheet" href="/scope-api-docs/assets/css/0.styles.0299e191.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/scope-api-docs/" class="home-link router-link-active"><!----> <span class="site-name">Scope API</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="auth"><a href="#auth" class="header-anchor">#</a> Auth</h1> <p><strong>URL</strong> : <code>/auth/login</code></p> <p><strong>Method</strong> : <code>POST</code></p> <p><strong>Auth required</strong> : NO</p> <p><strong>Request body</strong> :</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+    email<span class="token operator">:</span> String<span class="token punctuation">,</span>
+    password<span class="token operator">:</span> String
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="success-response"><a href="#success-response" class="header-anchor">#</a> Success Response</h2> <p><strong>Code</strong> : <code>200 OK</code></p> <p><strong>Content return types</strong> :</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+    statusCode<span class="token operator">:</span> Number<span class="token punctuation">,</span>
+    statusMessage<span class="token operator">:</span> String<span class="token punctuation">,</span>
+    message<span class="token operator">:</span> String<span class="token punctuation">,</span>
+    data<span class="token operator">:</span> <span class="token punctuation">{</span>
+        token<span class="token operator">:</span> String<span class="token punctuation">,</span>
+        user<span class="token operator">:</span> <span class="token punctuation">{</span>
+            sid<span class="token operator">:</span> String<span class="token punctuation">,</span>
+            firstname<span class="token operator">:</span> String<span class="token punctuation">,</span>
+            lastname<span class="token operator">:</span> String<span class="token punctuation">,</span>
+            email<span class="token operator">:</span> String<span class="token punctuation">,</span>
+            type<span class="token operator">:</span> String<span class="token punctuation">,</span>
+            avatar<span class="token operator">:</span> String<span class="token punctuation">,</span>
+            createdAt<span class="token operator">:</span> Date<span class="token punctuation">,</span>
+            <span class="token comment">// Client specific properties</span>
+            code<span class="token operator">?</span><span class="token operator">:</span> String<span class="token punctuation">,</span>
+            totalGoals<span class="token operator">?</span><span class="token operator">:</span> Number<span class="token punctuation">,</span>
+            achievedGoals<span class="token operator">?</span><span class="token operator">:</span> Number<span class="token punctuation">,</span>
+            finalGoal<span class="token operator">?</span><span class="token operator">:</span> String<span class="token punctuation">,</span>
+            jobcoach<span class="token operator">?</span><span class="token operator">:</span> String<span class="token punctuation">,</span>
+            feedbackType<span class="token operator">?</span><span class="token operator">:</span> String<span class="token punctuation">,</span>
+            goals<span class="token operator">?</span><span class="token operator">:</span> Array<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span><span class="token punctuation">,</span>
+            active<span class="token operator">?</span><span class="token operator">:</span> Boolean
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="error-response"><a href="#error-response" class="header-anchor">#</a> Error Response</h2> <p><strong>Code</strong> : <code>500 Internal Server Error</code></p> <p><strong>Condition</strong> : If something server-side goes wrong.</p> <p><strong>Content return types</strong> :</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+    statusCode<span class="token operator">:</span> Number<span class="token punctuation">,</span>
+    statusMessage<span class="token operator">:</span> String<span class="token punctuation">,</span>
+    message<span class="token operator">:</span> String<span class="token punctuation">,</span>
+    error<span class="token operator">?</span><span class="token operator">:</span> String
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>Code</strong> : <code>404 Not Found</code></p> <p><strong>Condition</strong> : User doesn't exist.</p> <p><strong>Content return types</strong> :</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+    statusCode<span class="token operator">:</span> Number<span class="token punctuation">,</span>
+    statusMessage<span class="token operator">:</span> String<span class="token punctuation">,</span>
+    message<span class="token operator">:</span> String
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>Code</strong> : <code>400 Bad Request</code></p> <p><strong>Condition</strong> : Bad request body.</p> <p><strong>Content return types</strong> :</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+    statusCode<span class="token operator">:</span> Number<span class="token punctuation">,</span>
+    statusMessage<span class="token operator">:</span> String<span class="token punctuation">,</span>
+    message<span class="token operator">:</span> String
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/scope-api-docs/assets/js/app.57cb345d.js" defer></script><script src="/scope-api-docs/assets/js/2.35f32d9e.js" defer></script><script src="/scope-api-docs/assets/js/6.9ff61a8d.js" defer></script>
+  </body>
+</html>

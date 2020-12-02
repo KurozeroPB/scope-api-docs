@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Icons | Scope API</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    
+    <meta name="description" content="Official json api for scope">
+    <link rel="preload" href="/scope-api-docs/assets/css/0.styles.0299e191.css" as="style"><link rel="preload" href="/scope-api-docs/assets/js/app.57cb345d.js" as="script"><link rel="preload" href="/scope-api-docs/assets/js/2.35f32d9e.js" as="script"><link rel="preload" href="/scope-api-docs/assets/js/15.2565360b.js" as="script"><link rel="prefetch" href="/scope-api-docs/assets/js/10.a5a2599e.js"><link rel="prefetch" href="/scope-api-docs/assets/js/11.797ffc2f.js"><link rel="prefetch" href="/scope-api-docs/assets/js/12.12c4fc00.js"><link rel="prefetch" href="/scope-api-docs/assets/js/13.c84132c9.js"><link rel="prefetch" href="/scope-api-docs/assets/js/14.c71089b1.js"><link rel="prefetch" href="/scope-api-docs/assets/js/16.f7af56ae.js"><link rel="prefetch" href="/scope-api-docs/assets/js/17.b09d4cf8.js"><link rel="prefetch" href="/scope-api-docs/assets/js/18.2c6efea7.js"><link rel="prefetch" href="/scope-api-docs/assets/js/19.59d4d1e4.js"><link rel="prefetch" href="/scope-api-docs/assets/js/20.4f0ec522.js"><link rel="prefetch" href="/scope-api-docs/assets/js/21.aad1e2bd.js"><link rel="prefetch" href="/scope-api-docs/assets/js/22.ed1f10c3.js"><link rel="prefetch" href="/scope-api-docs/assets/js/23.63c5e334.js"><link rel="prefetch" href="/scope-api-docs/assets/js/3.493ded78.js"><link rel="prefetch" href="/scope-api-docs/assets/js/4.685e2bcc.js"><link rel="prefetch" href="/scope-api-docs/assets/js/5.875de7b8.js"><link rel="prefetch" href="/scope-api-docs/assets/js/6.9ff61a8d.js"><link rel="prefetch" href="/scope-api-docs/assets/js/7.ec7f4d33.js"><link rel="prefetch" href="/scope-api-docs/assets/js/8.ddd8961c.js"><link rel="prefetch" href="/scope-api-docs/assets/js/9.eb62822f.js">
+    <link rel="stylesheet" href="/scope-api-docs/assets/css/0.styles.0299e191.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/scope-api-docs/" class="home-link router-link-active"><!----> <span class="site-name">Scope API</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="icons"><a href="#icons" class="header-anchor">#</a> Icons</h1> <p><strong>URL</strong> : <code>/icons/all</code></p> <p><strong>Method</strong> : <code>GET</code></p> <p><strong>Auth required</strong> : YES</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;Authorization&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Bearer &lt;token&gt;&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="success-response"><a href="#success-response" class="header-anchor">#</a> Success Response</h2> <p><strong>Code</strong> : <code>200 OK</code></p> <p><strong>Content return types</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+    statusCode<span class="token operator">:</span> Number<span class="token punctuation">,</span>
+    statusMessage<span class="token operator">:</span> String<span class="token punctuation">,</span>
+    message<span class="token operator">:</span> String<span class="token punctuation">,</span>
+    data<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            sid<span class="token operator">:</span> String<span class="token punctuation">,</span>
+            name<span class="token operator">:</span> String<span class="token punctuation">,</span>
+            pack<span class="token operator">:</span> String<span class="token punctuation">,</span>
+            slug<span class="token operator">:</span> String<span class="token punctuation">,</span>
+            <span class="token comment">// if pack = fad :</span>
+            colors<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                primary<span class="token operator">:</span> String<span class="token punctuation">,</span>
+                primaryOpacity<span class="token operator">:</span> Number<span class="token punctuation">,</span>
+                secondary<span class="token operator">:</span> String<span class="token punctuation">,</span>
+                secondaryOpacity<span class="token operator">:</span> Number
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token operator">...</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="error-response"><a href="#error-response" class="header-anchor">#</a> Error Response</h2> <p><strong>Code</strong> : <code>500 Internal Server Error</code></p> <p><strong>Condition</strong> : If something server-side goes wrong.</p> <p><strong>Content return types</strong> :</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+    statusCode<span class="token operator">:</span> Number<span class="token punctuation">,</span>
+    statusMessage<span class="token operator">:</span> String<span class="token punctuation">,</span>
+    message<span class="token operator">:</span> String<span class="token punctuation">,</span>
+    error<span class="token operator">?</span><span class="token operator">:</span> String
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/scope-api-docs/assets/js/app.57cb345d.js" defer></script><script src="/scope-api-docs/assets/js/2.35f32d9e.js" defer></script><script src="/scope-api-docs/assets/js/15.2565360b.js" defer></script>
+  </body>
+</html>
