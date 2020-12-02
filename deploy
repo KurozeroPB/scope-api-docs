@@ -13,6 +13,8 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f git@github.com:KurozeroPB/scope-api-docs.git master:gh-pages
+git push -f git@github.com:Pepijn98/scope-api-docs.git master:gh-pages
+git push -f git@github.com:future-id/scope-api-docs.git master:gh-pages
+git push -f git@github.com:future-id/scope-api.git master:gh-pages
 
 cd -
